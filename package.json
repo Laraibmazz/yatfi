@@ -1,0 +1,16 @@
+{
+  "name": "alter",
+  "version": "1.0.0",
+  "description": "analytics tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.ls"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security",
+    "mongoose": "^5.11.11"
+  }
+}
