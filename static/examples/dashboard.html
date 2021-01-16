@@ -24,7 +24,7 @@
 </head>
 
 <body class="">
-  <div class="wrapper">
+  <div class="wrapper" id="app">
     <div class="sidebar">
       <!--
         Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red"
@@ -553,7 +553,7 @@
             </li>
             <li class="nav-item">
               <a href="javascript:void(0)" class="nav-link">
-                About Us
+                About Us 
               </a>
             </li>
             <li class="nav-item">
@@ -754,14 +754,11 @@
         application: "black-dashboard-free"
       });
   </script>
-  <div id="app">
-  {{ message }}
-  </div>
   <script>
     new Vue({
   		el: '#app',
   		data: {
-  			message: "<h1>Hello World</h1>"
+  			message: "Hello World"
   		}
 		})
   </script>
