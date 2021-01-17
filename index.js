@@ -15,7 +15,6 @@ con.once('open', function() {
     console.log(res);
   })
 })
-
 app = express()
 
 app.use('/', express.static('./static/examples/'))
@@ -26,4 +25,4 @@ app.use('/test', function(req,res) {
   res.send('heelo')
 })
 
-app.listen(8000)
+app.listen(process.env.PORT || 8000)
