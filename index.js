@@ -22,4 +22,8 @@ app.use('/', express.static('./static/examples/'))
 
 app.use('/assets', router)
 
+app.use('/test', function(req,res) {
+  res.send('heelo')
+})
+
 app.listen(8000)
