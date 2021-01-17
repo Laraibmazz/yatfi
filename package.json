@@ -4,13 +4,16 @@
   "description": "analytics tool",
   "main": "index.js",
   "scripts": {
-    "test": "node index.ls"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "fs": "^0.0.1-security",
-    "mongoose": "^5.11.11"
+    "googleapis": "^67.0.0",
+    "mongoose": "^5.11.11",
+    "nodemailer": "^6.4.17"
   }
 }

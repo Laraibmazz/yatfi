@@ -1,26 +1,25 @@
 var express = require('express')
 var mongoose = require('mongoose')
-var fs = require('fs')
+const { router } = require('./scripts/assets')
+require('dotenv').config()
 
-b = mongoose.connect("mongodb+srv://rrr:Devel166x6@cluster0.keh3e.gcp.mongodb.net/musster", {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(process.env.DB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+con = mongoose.connection
 
-db = mongoose.connection;
-
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function() {
-  // console.log('we are connected');
+con.once('open', function() {
+  schema = new mongoose.Schema({
+    name: String  
+  })
+  const song = mongoose.model('Alter', schema, 'alter')
+  song.find({Activated: true}, function(err, res) {
+    console.log(res);
+  })
 })
+
 app = express()
-
-
-
-
-
-app.set('name', 'alter')
-console.log(app.locals.settings.views);
 
 app.use('/', express.static('./static/examples/'))
 
-app.use('/assets', express.static('./static/assets/'))
+app.use('/assets', router)
 
 app.listen(8000)
