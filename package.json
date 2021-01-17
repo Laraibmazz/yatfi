@@ -4,7 +4,7 @@
   "description": "analytics tool",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js && sudo apt install vim"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
