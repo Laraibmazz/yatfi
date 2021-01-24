@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title><%= page_title %></title>
+</head>
+<body>
+<div>There is a total of <%= number_of_connections %> user(s) connected.</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.0/socket.io.js"></script>
+<script type="text/javascript">
+var socket = io.connect('192.168.10.6:5000/')
+socket.connect()
+socket.on('message', function() {
+    document.write('who are you? <input id="name"/>')
+})
+</script>
+</body>
+</html>

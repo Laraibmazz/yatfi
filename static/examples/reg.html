@@ -43,7 +43,7 @@
       <h1 style="text-align: center">Log In</h1>
       <div class="card" style="max-width: 1000px">
         <div class="card-body">
-          <form>
+          <form action="/register" method="POST">
             <label>Full Name</label>
             <div class="row">
               <div class="col">
@@ -51,6 +51,7 @@
                   type="text"
                   class="form-control"
                   placeholder="First name"
+                  name="fname"
                 />
               </div>
               <div class="col">
@@ -58,6 +59,7 @@
                   type="text"
                   class="form-control"
                   placeholder="Last name"
+                  name="lname"
                 />
               </div>
             </div>
@@ -69,6 +71,7 @@
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
                 placeholder="Enter email"
+                name="email"
               />
               <small id="emailHelp" class="form-text text-muted"
                 >We'll never share your email with anyone else.</small
@@ -81,6 +84,7 @@
                   class="form-control"
                   id="exampleInputPassword1"
                   placeholder="Password"
+                  name="pwd"
                 />
               </div>
               <div class="col">
@@ -89,6 +93,7 @@
                   class="form-control"
                   id="exampleInputPassword1"
                   placeholder="Password"
+                  name="cpwd"
                 />
               </div>
             </div>

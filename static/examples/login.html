@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/black-dashboard.css" />
+    <link rel="stylesheet" href="../assets/css/black-dashboard.css.map" />
+    <link rel="stylesheet" href="../assets/css/black-dashboard.min.css" />
+    <script src="../assets/js/black-dashboard.min.js"></script>
+    <script src="../assets/js/core/jquery.min.js"></script>
+    <script src="../assets/js/core/popper.min.js"></script>
+    <script src="../assets/css/nucleo-icons.css"></script>
+  </head>
+
+  <body>
+    <div
+      id="form"
+      style="
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      "
+    >
+      <div class="container d-flex justify-content-between" style="max-width: 1025px;">
+        <a
+          href="javascript:void(0)"
+          class="navbar-brand badge badge-primary"
+          style="padding: 10px;font-size: 14px;"
+        >
+          ALTER
+        </a>
+        <div>
+            <a href="" class="badge badge-default">
+                <h5 style="margin: 0;padding: 0;">
+                    Sign Up
+                </h5>
+            </a>
+        </div>
+      </div>
+      <h1 style="text-align: center;margin-top: 20px; padding-bottom: 20px;">Log In</h1>
+      <div class="card" style="max-width: 1000px">
+        <div class="card-body">
+          <form action="/login" method="POST">
+            <div class="form-group" style="margin-top: 20px">
+              <label for="exampleInputEmail1">Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Enter email"
+                name="email"
+              />
+              <small id="emailHelp" class="form-text text-muted"
+                >We'll never share your email with anyone else.</small
+              >
+            </div>
+            <div class="row">
+              <div class="col">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  placeholder="Password"
+                  name="pwd"
+                />
+              </div>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" value="" />
+                Option one is this
+                <span class="form-check-sign">
+                  <span class="check"></span>
+                </span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
