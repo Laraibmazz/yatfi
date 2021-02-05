@@ -42,6 +42,9 @@ app.use("/", function(req, res, next) {
     }
     console.log('sflslfk')
     console.log(req.secure)
+    if (req.protocol === 'https') {
+        console.log('It worked')
+    }
 })
 
 app.use("/", express.static(__dirname + '/static/examples/'))
