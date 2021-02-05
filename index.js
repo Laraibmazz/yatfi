@@ -38,7 +38,10 @@ app.use("/", function(req, res, next) {
     }
     else {
         next()
+    console.log(req.secure)
     }
+    console.log('sflslfk')
+    console.log(req.secure)
 })
 
 app.use("/", express.static(__dirname + '/static/examples/'))
