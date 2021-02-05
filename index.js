@@ -34,7 +34,7 @@ con = mongoose.connection;
 app.use("/", function(req, res, next) {
     if (req.secure) {
         res.redirect('https://yatfi.herokuapp.com')
-	console.log('where am i?')
+	console.log(req.secure)
     }
     else {
         next()
