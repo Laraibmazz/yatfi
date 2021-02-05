@@ -33,15 +33,11 @@ con = mongoose.connection;
 
 app.use("/", function(req, res, next) {
     if (req.secure) {
-        res.redirect('https://yatfi.herokuapp.com')
-	console.log(req.secure)
+        res.redirect('https://yatfi.herokuapp.com/')
     }
     else {
         next()
-    console.log(req.secure)
     }
-    console.log('sflslfk')
-    console.log(req.secure)
     if (req.protocol === 'https') {
         console.log('It worked')
     }
