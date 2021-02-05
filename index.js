@@ -32,12 +32,8 @@ con = mongoose.connection;
 // Middlewares
 
 app.use("/", function(req, res, next) {
-     if (req.protocol == 'http') {
-        res.redirect('https://yatfi.herokuapp.com')
-     }
-     else {
-         next()
-	}
+    console.log(req.protocol)
+    next()
 })
 
 app.use("/", express.static(__dirname + '/static/examples/'))
