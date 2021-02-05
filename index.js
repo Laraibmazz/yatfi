@@ -33,7 +33,7 @@ con = mongoose.connection;
 
 app.use('/', function(req, res) {
     if (req.protocol == 'http') {
-	res.redirect('https://yatfi.herokuapp.com')
+	res.redirect('https://alter.herokuapp.com')
 	console.log("haan, redirect kr raha hoon. sahi hai na?")
     }
 })
