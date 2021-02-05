@@ -31,14 +31,17 @@ con = mongoose.connection;
 
 // Middlewares
 
-app.use('/', function(req, res) {
-    if (req.protocol == 'http') {
-	res.redirect('https://yatfi.herokuapp.com')
-	console.log("haan, redirect kr raha hoon. sahi hai na?")
-    }
+app.use("/", function(req, res, next) {
+     if (req.protocol == 'http') {
+        res.redirect('https://yatfi.herokuapp.com')
+     }
+     else {
+         next()
+	}
 })
 
-app.get("/",express.static('./static/examples/'));
+app.use("/", express.static(__dirname + '/static/examples/'))
+
 app.use("/assets", router);
 app.use("/register", express.static("./static/examples/reg.html"));
 app.use("/login", express.static("./static/examples/login.html"));
