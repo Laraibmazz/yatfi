@@ -31,6 +31,12 @@ con = mongoose.connection;
 
 // Middlewares
 
+app.use('/', function(req, res) {
+    if (req.protocol == 'http') {
+	res.redirect('https://yatfi.herokuapp.com')
+    }
+})
+
 app.use("/", express.static("./static/examples/"));
 app.use("/assets", router);
 app.use("/register", express.static("./static/examples/reg.html"));
