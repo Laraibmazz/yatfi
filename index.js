@@ -32,17 +32,10 @@ con = mongoose.connection;
 // Middlewares
 
 app.use("/", function(req, res, next) {
-    if (req.secure) {
-        res.redirect('https://yatfi.herokuapp.com/')
-    }
-    else {
-        next()
-    }
-    if (req.protocol === 'https') {
-        console.log('It worked')
-    }
+    console.log(req.originalUrl)
+    console.log(req.get('host'))
+	next()
 })
-
 app.use("/", express.static(__dirname + '/static/examples/'))
 
 app.use("/assets", router);
@@ -86,10 +79,12 @@ app.post("/register", u, function (req, res) {
 
 // Listen to Port
 
-var PORT = process.env.PORT || 80
+var PORT = process.env.PORT || 443
 server = app.listen(PORT, function() {
   console.log(`connected on ${PORT}`)
 });
+
+console.log(server.address().port)
 
 var io = socket(server)
 
