@@ -13,6 +13,9 @@ var socket = require('socket.io')
 
 require("dotenv").config();
 app = express();
+
+app.enable('trust proxy');
+
 var u = bodyParser.urlencoded({ extended: true });
 app.use(
   cookieSession({
@@ -33,7 +36,7 @@ con = mongoose.connection;
 
 app.use("/", function(req, res, next) {
     console.log(req.originalUrl)
-    console.log(req.get('host'))
+    console.log(req.protocol)
 	next()
 })
 app.use("/", express.static(__dirname + '/static/examples/'))
