@@ -1,0 +1,8 @@
+Controllers
+    - mongodb methods etc (Supervisor for services)
+Routes 
+    - Routes
+models
+    - models and schemas
+services
+    - tasks for controller ex getting and saving data in db
