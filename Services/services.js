@@ -1,9 +1,13 @@
 var {} = require('../Models/models')
 
-function Find() {
-    User.find({}, function(err, res) {
-        console.log(res[0])
-    })
+var service = {
+    user: function() {
+        User.find({})
+            .then(a => console.log(a[0]))
+            .catch(b => console.log('sdf'))
+    }
 }
 
-module.exports = {Find}
+service.user()
+
+module.exports = {service}
