@@ -15,13 +15,7 @@ router.use(function (req, res, next) {
     }
 })
 
-router.use('/', function(req, res) {
-    if (req.session.login == 'login') {
-        res.redirect('/admin')
-    } else {
-        res.sendFile(path.join(__dirname + '/../static/examples/index.html'))
-    }
-})
+router.use('/', express.static(path.join(__dirname + '/../static/examples/index.html')))
 
 router.use("/assets", express.static(__dirname + '/../static/assets/'))
 
