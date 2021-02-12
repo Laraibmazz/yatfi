@@ -1,13 +1,15 @@
 var {} = require('../Models/models')
 
+
 var service = {
-    user: function() {
-        User.find({})
-            .then(a => console.log(a[0]))
-            .catch(b => console.log('sdf'))
+    user: function(req) {
+        User.findOne({}, function(err, res) {
+            if (res.email == req.email) {
+                authenticated = true
+            }
+        })
+        return true
     }
 }
-
-service.user()
 
 module.exports = {service}

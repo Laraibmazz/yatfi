@@ -1,4 +1,3 @@
-const { reseller } = require("googleapis/build/src/apis/reseller");
 var db = require("mongoose");
 require("dotenv").config();
 
