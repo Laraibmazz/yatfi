@@ -1,12 +1,12 @@
 var express = require('express')
+var path = require('path')
 var { register } = require('./register')
 var { login } = require('./login')
 var { app } = require('./admin')
-var { redirect } = require('./redirect')
 
 router = express.Router()
 
-router.use("/", function (req, res, next) {
+router.use(function (req, res, next) {
     if (req.protocol == 'http' && req.hostname != 'localhost') {
         res.redirect('https://yatfi.herokuapp.com/')
     }
@@ -15,9 +15,13 @@ router.use("/", function (req, res, next) {
     }
 })
 
-router.use(redirect)
-
-router.use("/", express.static(__dirname + '/../static/examples/'))
+router.use('/', function(req, res) {
+    if (req.session.login == 'login') {
+        res.redirect('/admin')
+    } else {
+        res.sendFile(path.join(__dirname + '/../static/examples/index.html'))
+    }
+})
 
 router.use("/assets", express.static(__dirname + '/../static/assets/'))
 
