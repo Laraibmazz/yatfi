@@ -4,7 +4,7 @@ var register = express.Router()
 
 register.route('/')
     .get(function(req, res) {
-        res.send('res.send has been sent')
+        res.sendFile(path.join(__dirname + '/../static/examples/reg.html'))
     })
     .post(function(req, res) {
         // Todo: Create register auth

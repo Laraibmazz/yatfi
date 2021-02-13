@@ -1,24 +1,20 @@
-var db = require("mongoose");
+var mongoose = require("mongoose");
 require("dotenv").config();
 
 // Database connection
 
-db.connect("mongodb+srv://rrr:Devel166x6@cluster0.keh3e.gcp.mongodb.net/alter", {
+mongoose.connect("mongodb://127.0.0.1:27017/yatfi", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
-con = db.connection;
-
 // User shema
 
-module.exports = schema = new db.Schema({
-    name: String,
-    email: String,
-    pwd: String,
-    BusinessName: String
+schema = new mongoose.Schema({
+    name: String
 });
 
-User = db.model("Alter", schema, "alter");
+User = mongoose.model("collection", schema, "collection");
+
 
 // User model
 

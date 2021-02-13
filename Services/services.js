@@ -3,12 +3,13 @@ var {} = require('../Models/models')
 
 var service = {
     user: function(req) {
-        User.findOne({}, function(err, res) {
-            if (res.email == req.email) {
-                authenticated = true
-            }
+        User.find({}, function(err, res) {
+            console.log(res);
         })
         return true
+    },
+    create_user: function(req) {
+      User.create()
     }
 }
 
