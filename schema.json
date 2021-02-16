@@ -1,0 +1,36 @@
+{
+  "_id": 1,
+  "name": "rajab",
+  "surname": "khan",
+  "email": "rajabm259@gmail.com",
+  "pwd": "Password",
+  "BusinessType": "",
+  "BusinessName": "",
+  "MemberShip": "Free or Premium ()",
+  "Activated": true,
+  "siteCount": 1,
+  "sites": {
+    "site1": {
+      "siteId": 1,
+      "siteName": "site1",
+      "siteURL": "",
+      "ActiveUsers": 100,
+      "monthlyUsers": 15000,
+      "totalUsers": 150000,
+      "sales": "",
+      "sales_worth": "",
+      "MembrAccoutns"
+      "users": [
+        {
+          "city": "region",
+          "region": "",
+          "country": "PK",
+          "coor": "coordinated",
+          "timezone": "timezoe",
+          "date_visited": "Date",
+          "timeOfVisit": 10
+        }
+      ]
+    }
+  }
+}
